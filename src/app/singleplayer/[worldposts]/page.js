@@ -4,10 +4,23 @@ import Gallery from "@/components/Gallery";
 import { db } from "@/utils/dbConnection";
 
 export default async function WorldPosts({ params }) {
-  const worldId = await params.worldposts;
+  const worldId = params.worldposts;
 
-  const query = await db.query("SELECT * FROM worlds WHERE id = $1", [worldId]);
+  const query = await db.query(
+    `SELECT * FROM worlds 
+    WHERE id = $1`,
+    [worldId]
+  );
+
+  const commentsQuery = await db.query(
+    "SELECT * FROM world_comments WHERE world_id = $1",
+    [worldId]
+  );
+
   const worldData = query.rows[0];
+  const commentData = commentsQuery.rows;
+
+  console.log(commentData);
 
   return (
     <>
@@ -19,8 +32,8 @@ export default async function WorldPosts({ params }) {
       </div>
       <p>{worldData.overview}</p>
       <Gallery />
-      <CommentsForm />
-      <Comments />
+      <CommentsForm selectedWorld={worldData.id} />
+      <Comments commentArray={commentData} />
     </>
   );
 }
