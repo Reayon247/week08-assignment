@@ -17,16 +17,9 @@ export default async function WorldPosts({ params }) {
     [worldId]
   );
 
-  const galleryQuery = await db.query(
-    "SELECT * FROM world_gallery WHERE world_id = $1",
-    [worldId]
-  );
-
-  const galleryData = galleryQuery.rows;
   const worldData = query.rows[0];
   const commentData = commentsQuery.rows;
 
-  console.log(galleryData);
   return (
     <>
       <div>
