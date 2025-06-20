@@ -1,4 +1,6 @@
-export default function Gallery() {
+"use client";
+
+export default function Gallery(props) {
   return (
     <>
       <h1>Gallery</h1>
