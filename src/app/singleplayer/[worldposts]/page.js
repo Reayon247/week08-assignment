@@ -32,7 +32,7 @@ export default async function WorldPosts({ params }) {
       <p className={styles.overview}>{worldData.overview}</p>
       <Gallery selectedWorld={worldData.id} />
       <CommentsForm selectedWorld={worldData.id} />
-      <Comments commentArray={commentData} />
+      <Comments commentArray={commentData} selectedWorld={worldData.id} />
     </main>
   );
 }

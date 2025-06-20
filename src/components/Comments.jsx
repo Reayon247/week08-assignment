@@ -1,4 +1,5 @@
 import styles from "@/Styles/Comments.module.css";
+import DeleteButton from "./DeleteButton";
 
 export default function Comments(props) {
   const comments = props.commentArray;
@@ -10,6 +11,10 @@ export default function Comments(props) {
           <div key={comment.id} className={styles.commentbox}>
             <p className={styles.commentname}>{comment.name} says: </p>
             <p className={styles.commentcomment}>{comment.comment}</p>
+            <DeleteButton
+              commentId={comment.id}
+              selectedWorld={props.selectedWorld}
+            />
           </div>
         ))}
       </div>
