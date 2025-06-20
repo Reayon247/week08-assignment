@@ -5,12 +5,14 @@ export default function Comments(props) {
   return (
     <div className={styles.commentcon}>
       <h2 className={styles.title}>Comments</h2>
-      {comments.map((comment) => (
-        <div key={comment.id} className={styles.commentbox}>
-          <p className={styles.commentname}>{comment.name} says: </p>
-          <p className={styles.commentcomment}>{comment.comment}</p>
-        </div>
-      ))}
+      <div className={styles.justcommentscon}>
+        {comments.map((comment) => (
+          <div key={comment.id} className={styles.commentbox}>
+            <p className={styles.commentname}>{comment.name} says: </p>
+            <p className={styles.commentcomment}>{comment.comment}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

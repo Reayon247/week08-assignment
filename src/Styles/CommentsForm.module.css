@@ -3,11 +3,17 @@
   grid-column-end: 3;
   border-top: 2px solid var(--borders);
   padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formcon {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .title {
@@ -20,11 +26,16 @@
   padding: 10px;
 }
 
+.label {
+  align-self: flex-start;
+}
+
 .input {
   background-color: aliceblue;
   border: 2px solid gray;
   margin: 5px;
   color: black;
+  width: 100%;
 }
 
 .submit {
@@ -41,5 +52,11 @@
   &:hover {
     background-color: grey;
     color: white;
+  }
+}
+
+@media (min-width: 850px) {
+  .formcon {
+    width: 70%;
   }
 }

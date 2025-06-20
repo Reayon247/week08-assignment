@@ -16,3 +16,9 @@
   padding-top: 20px;
   font-size: large;
 }
+
+@media (min-width: 850px) {
+  .about {
+    width: 70%;
+  }
+}

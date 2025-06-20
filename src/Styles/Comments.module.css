@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .title {
@@ -22,4 +23,21 @@
   border-radius: 5px;
   border-left: 2px solid #00f1f1;
   border-right: 2px solid #00f1f1;
+  width: 100%;
+}
+
+.justcommentscon {
+  height: 400px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 850px) {
+  .commentbox {
+    width: 70%;
+  }
 }
