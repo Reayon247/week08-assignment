@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import styles from "@/Styles/Gallery.module.css";
 //gallery image imports
 import imgGallery from "@/utils/gallery";
 
@@ -38,20 +39,26 @@ export default function Gallery(props) {
   const currentImage = filterImg[selectedImage];
 
   return (
-    <>
-      <h1>Gallery</h1>
+    <div className={styles.gallery}>
+      <h1 className={styles.title}>Screenshots of the world</h1>
 
-      <div>
+      <div className={styles.imagecon}>
         <Image
           src={currentImage.img_var}
           alt={currentImage.img_alt}
-          width={100}
-          height={100}
+          height={1080}
+          width={1920}
           placeholder="blur"
+          className={styles.image}
         />
-        <p>{currentImage.img_alt}</p> <button onClick={handlePrev}>Back</button>
-        <button onClick={handleNext}>Forwards</button>
+        <p className={styles.desc}>{currentImage.img_alt}</p>
+        <button className={styles.buttonleft} onClick={handlePrev}>
+          ←
+        </button>
+        <button className={styles.buttonright} onClick={handleNext}>
+          →
+        </button>
       </div>
-    </>
+    </div>
   );
 }

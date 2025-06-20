@@ -224,14 +224,14 @@ const imgGallery = [
   },
   { id: 52, img_var: LITV3_11, img_alt: "Oli map", worldId: 4 },
   { id: 53, img_var: DCM_1, img_alt: "My base inside", worldId: 5 },
-  { id: 53, img_var: DCM_2, img_alt: "My base outside", worldId: 5 },
+  { id: 54, img_var: DCM_2, img_alt: "My base outside", worldId: 5 },
   {
-    id: 53,
+    id: 55,
     img_var: DCM_3,
     img_alt: "My base outside - defences deployed",
     worldId: 5,
   },
-  { id: 53, img_var: DCM_4, img_alt: "Me!", worldId: 5 },
+  { id: 56, img_var: DCM_4, img_alt: "Me!", worldId: 5 },
 ];
 
 export default imgGallery;

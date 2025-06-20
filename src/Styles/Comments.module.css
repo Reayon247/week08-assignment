@@ -1,0 +1,25 @@
+.commentcon {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border-top: 2px solid var(--borders);
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-top: 20px;
+  font-size: x-large;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.commentbox {
+  border-radius: 5px;
+  border-left: 2px solid #00f1f1;
+  border-right: 2px solid #00f1f1;
+}

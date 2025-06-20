@@ -2,6 +2,7 @@ import Comments from "@/components/Comments";
 import CommentsForm from "@/components/CommentsForm";
 import Gallery from "@/components/Gallery";
 import { db } from "@/utils/dbConnection";
+import styles from "@/Styles/WorldPosts.module.css";
 
 export default async function WorldPosts({ params }) {
   const worldId = params.worldposts;
@@ -21,17 +22,17 @@ export default async function WorldPosts({ params }) {
   const commentData = commentsQuery.rows;
 
   return (
-    <>
-      <div>
+    <main>
+      <div className={styles.info}>
         <h2>{worldData.modpack}</h2>
         <h3>{worldData.world_name}</h3>
-        <h3>{worldData.hours}</h3>
-        <h3>{worldData.date_started}</h3>
+        <h3>Hours played: {worldData.hours}</h3>
+        <h3>Date Started: {worldData.date_started}</h3>
       </div>
-      <p>{worldData.overview}</p>
+      <p className={styles.overview}>{worldData.overview}</p>
       <Gallery selectedWorld={worldData.id} />
       <CommentsForm selectedWorld={worldData.id} />
       <Comments commentArray={commentData} />
-    </>
+    </main>
   );
 }

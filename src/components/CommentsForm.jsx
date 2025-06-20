@@ -1,5 +1,6 @@
 import { db } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
+import styles from "@/Styles/CommentsForm.module.css";
 
 export default function CommentsForm(props) {
   const worldID = props.selectedWorld;
@@ -21,15 +22,21 @@ export default function CommentsForm(props) {
   }
 
   return (
-    <>
-      <h2>Leave a comment!</h2>
-      <form action={handleSubmit}>
-        <label htmlFor="name">Your name</label>
-        <input type="text" name="name" required />
-        <label htmlFor="comment">Your comment</label>
-        <input type="text" name="comment" required />
-        <button type="submit">Post</button>
+    <div className={styles.form}>
+      <h2 className={styles.title}>Leave a comment!</h2>
+      <form action={handleSubmit} className={styles.formcon}>
+        <label className={styles.label} htmlFor="name">
+          Your name:
+        </label>
+        <input className={styles.input} type="text" name="name" required />
+        <label className={styles.label} htmlFor="comment">
+          Your comment:
+        </label>
+        <input className={styles.input} type="text" name="comment" required />
+        <button className={styles.submit} type="submit">
+          Post
+        </button>
       </form>
-    </>
+    </div>
   );
 }

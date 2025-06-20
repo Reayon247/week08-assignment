@@ -1,14 +1,21 @@
 import Link from "next/link";
+import headerStyles from "@/Styles/Header.module.css";
 
 export default function Header() {
   return (
-    <>
-      <h1>Reayons Minecraft Worlds Log</h1>
-      <nav>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/singleplayer"}>Singleplayer Worlds</Link>
-        <Link href={"/multiplayer"}>Multiplayer Worlds</Link>
+    <header className={headerStyles.header}>
+      <h1 className={headerStyles.title}>Reayon's Minecraft World Log</h1>
+      <nav className={headerStyles.nav}>
+        <Link href={"/"} className={headerStyles.links}>
+          Home
+        </Link>
+        <Link href={"/singleplayer"} className={headerStyles.links}>
+          Singleplayer Worlds
+        </Link>
+        <Link href={"/multiplayer"} className={headerStyles.links}>
+          Multiplayer Worlds
+        </Link>
       </nav>
-    </>
+    </header>
   );
 }
