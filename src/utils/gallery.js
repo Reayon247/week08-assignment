@@ -71,7 +71,13 @@ import DCM_4 from "@/../public/images/Deceased-Craft-Resident-evil-rp/me.webp";
 const imgGallery = [
   { id: 1, img_var: ATM10_1, img_alt: "The front of my base", worldId: 1 },
   { id: 2, img_var: ATM10_2, img_alt: "sideview of my base", worldId: 1 },
-  { id: 3, img_var: ATM10_3, img_alt: "All my ATM stars", worldId: 1 },
+  {
+    id: 3,
+    img_var: ATM10_3,
+    img_alt: "All my ATM stars",
+    worldId: 1,
+    preview: true,
+  },
   { id: 4, img_var: ATM10_4, img_alt: "All my antimatter", worldId: 1 },
   {
     id: 5,
@@ -132,7 +138,13 @@ const imgGallery = [
   { id: 20, img_var: PA2_2, img_alt: "My home and warehouse", worldId: 2 },
   { id: 21, img_var: PA2_3, img_alt: "Inside the warehouse", worldId: 2 },
   { id: 22, img_var: PA2_4, img_alt: "Towns farm land", worldId: 2 },
-  { id: 23, img_var: PA2_5, img_alt: "View of my town", worldId: 2 },
+  {
+    id: 23,
+    img_var: PA2_5,
+    img_alt: "View of my town",
+    worldId: 2,
+    preview: true,
+  },
   { id: 24, img_var: PA2_6, img_alt: "alternate view of my town", worldId: 2 },
   { id: 25, img_var: PA2_7, img_alt: "POV walking around my town", worldId: 2 },
   { id: 26, img_var: PA2_8, img_alt: "View from a rooftop", worldId: 2 },
@@ -152,7 +164,13 @@ const imgGallery = [
     img_alt: "Where I generated most of my items",
     worldId: 3,
   },
-  { id: 32, img_var: CUS_5, img_alt: "Enchantment floor", worldId: 3 },
+  {
+    id: 32,
+    img_var: CUS_5,
+    img_alt: "Enchantment floor",
+    worldId: 3,
+    preview: true,
+  },
   { id: 33, img_var: CUS_6, img_alt: "Netherite generator", worldId: 3 },
   {
     id: 34,
@@ -192,6 +210,7 @@ const imgGallery = [
     img_var: LITV3_1,
     img_alt: "My village and base on the left",
     worldId: 4,
+    preview: true,
   },
   { id: 43, img_var: LITV3_2, img_alt: "Inside my base", worldId: 4 },
   {
@@ -231,7 +250,7 @@ const imgGallery = [
     img_alt: "My base outside - defences deployed",
     worldId: 5,
   },
-  { id: 56, img_var: DCM_4, img_alt: "Me!", worldId: 5 },
+  { id: 56, img_var: DCM_4, img_alt: "Me!", worldId: 5, preview: true },
 ];
 
 export default imgGallery;
