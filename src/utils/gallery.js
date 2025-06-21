@@ -68,6 +68,43 @@ import DCM_2 from "@/../public/images/Deceased-Craft-Resident-evil-rp/base2.webp
 import DCM_3 from "@/../public/images/Deceased-Craft-Resident-evil-rp/base3.webp";
 import DCM_4 from "@/../public/images/Deceased-Craft-Resident-evil-rp/me.webp";
 
+// ATM 8 Imports
+
+import ATM8_1 from "@/../public/images/ATM-8-Third-times-lucky/Townshot1.webp";
+import ATM8_2 from "@/../public/images/ATM-8-Third-times-lucky/mainstreet.webp";
+import ATM8_3 from "@/../public/images/ATM-8-Third-times-lucky/mainstreetalt.webp";
+import ATM8_4 from "@/../public/images/ATM-8-Third-times-lucky/underground.webp";
+import ATM8_5 from "@/../public/images/ATM-8-Third-times-lucky/home.webp";
+import ATM8_6 from "@/../public/images/ATM-8-Third-times-lucky/insidehouse.webp";
+import ATM8_7 from "@/../public/images/ATM-8-Third-times-lucky/floor1.webp";
+import ATM8_8 from "@/../public/images/ATM-8-Third-times-lucky/floor2.webp";
+import ATM8_9 from "@/../public/images/ATM-8-Third-times-lucky/floor3.webp";
+import ATM8_10 from "@/../public/images/ATM-8-Third-times-lucky/floor4.webp";
+
+// ATM 9 Imports
+
+import ATM9_1 from "@/../public/images/ATM-9-Epic-Land/home.webp";
+import ATM9_2 from "@/../public/images/ATM-9-Epic-Land/hometrainstation.webp";
+import ATM9_3 from "@/../public/images/ATM-9-Epic-Land/base.webp";
+import ATM9_4 from "@/../public/images/ATM-9-Epic-Land/spacelaunch.webp";
+import ATM9_5 from "@/../public/images/ATM-9-Epic-Land/spacestation.webp";
+import ATM9_6 from "@/../public/images/ATM-9-Epic-Land/town.webp";
+import ATM9_7 from "@/../public/images/ATM-9-Epic-Land/trainbridge.webp";
+import ATM9_8 from "@/../public/images/ATM-9-Epic-Land/mystical.webp";
+
+// Create astral imports
+
+import CA_1 from "@/../public/images/Create-Astral-burger-king/housefactory.webp";
+import CA_2 from "@/../public/images/Create-Astral-burger-king/resourcegantry.webp";
+import CA_3 from "@/../public/images/Create-Astral-burger-king/viewbase.webp";
+import CA_4 from "@/../public/images/Create-Astral-burger-king/fromtrainstation.webp";
+import CA_5 from "@/../public/images/Create-Astral-burger-king/insidehome.webp";
+import CA_6 from "@/../public/images/Create-Astral-burger-king/insidewarehouse.webp";
+import CA_7 from "@/../public/images/Create-Astral-burger-king/insidefactory.webp";
+import CA_8 from "@/../public/images/Create-Astral-burger-king/todo.webp";
+import CA_9 from "@/../public/images/Create-Astral-burger-king/resourcegen.webp";
+import CA_10 from "@/../public/images/Create-Astral-burger-king/lavagen.webp";
+
 const imgGallery = [
   { id: 1, img_var: ATM10_1, img_alt: "The front of my base", worldId: 1 },
   { id: 2, img_var: ATM10_2, img_alt: "sideview of my base", worldId: 1 },
@@ -251,6 +288,204 @@ const imgGallery = [
     worldId: 5,
   },
   { id: 56, img_var: DCM_4, img_alt: "Me!", worldId: 5, preview: true },
+  {
+    id: 57,
+    img_var: ATM8_1,
+    img_alt: "View of the whole town",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 58,
+    img_var: ATM8_2,
+    img_alt: "Looking down the main street of the town",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 59,
+    img_var: ATM8_3,
+    img_alt: "Looking down the other side of the main street",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 60,
+    img_var: ATM8_4,
+    img_alt: "below the town, connected by a subway",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 61,
+    img_var: ATM8_5,
+    img_alt: "My home connected to the builders hut",
+    worldId: 6,
+    preview: true,
+  },
+  {
+    id: 62,
+    img_var: ATM8_6,
+    img_alt: "Inside my home",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 63,
+    img_var: ATM8_7,
+    img_alt: "The first floor underground, focused on autocrafting and power",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 64,
+    img_var: ATM8_8,
+    img_alt: "The second floor underground, focused on mob drop collection",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 65,
+    img_var: ATM8_9,
+    img_alt: "The third floor underground, focused on the botania mod",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 66,
+    img_var: ATM8_10,
+    img_alt:
+      "The fourth floor underground, focused on growing mystical agriculture seeds",
+    worldId: 6,
+    preview: false,
+  },
+  {
+    id: 67,
+    img_var: ATM9_1,
+    img_alt: "My home",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 68,
+    img_var: ATM9_2,
+    img_alt: "My homes train station",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 69,
+    img_var: ATM9_3,
+    img_alt: "Inside my base, also connected via train",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 70,
+    img_var: ATM9_4,
+    img_alt: "Space lauch site above my base",
+    worldId: 7,
+    preview: true,
+  },
+  {
+    id: 71,
+    img_var: ATM9_5,
+    img_alt: "My space station",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 72,
+    img_var: ATM9_6,
+    img_alt: "View of my town",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 73,
+    img_var: ATM9_7,
+    img_alt: "Train bridge crossing the river",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 74,
+    img_var: ATM9_8,
+    img_alt: "Mystical agriculture farmland",
+    worldId: 7,
+    preview: false,
+  },
+  {
+    id: 75,
+    img_var: CA_1,
+    img_alt: "View of the house, warehouse and factory",
+    worldId: 8,
+    preview: true,
+  },
+  {
+    id: 76,
+    img_var: CA_2,
+    img_alt:
+      "The gantry that carries the vault from the resource gen to my factory",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 77,
+    img_var: CA_3,
+    img_alt: "Alternate view of my base",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 78,
+    img_var: CA_4,
+    img_alt: "View of my home and warehouse from the train station",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 79,
+    img_var: CA_5,
+    img_alt: "Inside my home",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 80,
+    img_var: CA_6,
+    img_alt: "Inside my warehouse",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 81,
+    img_var: CA_7,
+    img_alt: "Inside my factory",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 82,
+    img_var: CA_8,
+    img_alt: "My todo list",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 83,
+    img_var: CA_9,
+    img_alt: "Ore generator",
+    worldId: 8,
+    preview: false,
+  },
+  {
+    id: 84,
+    img_var: CA_10,
+    img_alt: "Infinite Lava generator",
+    worldId: 8,
+    preview: false,
+  },
 ];
 
 export default imgGallery;

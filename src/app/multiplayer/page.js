@@ -30,7 +30,6 @@ export default async function multiplayer({ searchParams }) {
     <main>
       <h2 className={styles.title}>These are my multiplayer saves</h2>
       <h3 className={styles.navtitle}>Sort by date:</h3>
-      <p className={styles.navtitle}>Currently: {search}</p>
       <nav className={styles.sortcon}>
         <Link className={styles.linkasc} href={"/multiplayer?sort=asc"}>
           Sort Asc
@@ -39,6 +38,7 @@ export default async function multiplayer({ searchParams }) {
           Sort Desc
         </Link>
       </nav>
+      <p className={styles.navtitle}>Currently: {search}</p>
       <div className={styles.postcontainer}>
         {multiplayerWorlds.map((worlds) => {
           const previewImage = imgGallery.find(
