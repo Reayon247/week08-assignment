@@ -1,9 +1,18 @@
 import { db } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import styles from "@/Styles/CommentsForm.module.css";
+// import { redirect } from "next/navigation";
 
 export default function CommentsForm(props) {
   const worldID = props.selectedWorld;
+  const type = props.type;
+  let worldType = null;
+
+  if (type === true) {
+    worldType = "singleplayer";
+  } else {
+    worldType = "multiplayer";
+  }
 
   async function handleSubmit(formData) {
     "use server";
@@ -13,12 +22,15 @@ export default function CommentsForm(props) {
       comment: formData.get("comment"),
     };
 
-    db.query(
+    await db.query(
       `INSERT INTO world_comments (name, comment, world_id) VALUES ($1, $2, $3)`,
       [formData.name, formData.comment, worldID]
     );
 
     revalidatePath(`/${worldID}`);
+
+    // this is just to show I know how redirects work, Ive got no use for it atm as the comments box is right next to the form
+    // redirect(`/${worldType}/${worldID}`);
   }
 
   return (

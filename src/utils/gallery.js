@@ -89,7 +89,7 @@ const imgGallery = [
   {
     id: 7,
     img_var: ATM10_7,
-    img_alt: "Immsersive engineering room",
+    img_alt: "Immersive engineering room",
     worldId: 1,
   },
   {

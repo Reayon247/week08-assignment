@@ -31,7 +31,10 @@ export default async function WorldPosts({ params }) {
       </div>
       <p className={styles.overview}>{worldData.overview}</p>
       <Gallery selectedWorld={worldData.id} />
-      <CommentsForm selectedWorld={worldData.id} />
+      <CommentsForm
+        selectedWorld={worldData.id}
+        type={worldData.singleplayer}
+      />
       <Comments commentArray={commentData} selectedWorld={worldData.id} />
     </main>
   );
