@@ -1,7 +1,6 @@
 import homeStyle from "@/Styles/Home.module.css";
 import { db } from "@/utils/dbConnection";
 import Link from "next/link";
-import styles from "@/Styles/WorldList.module.css";
 import Image from "next/image";
 import imgGallery from "@/utils/gallery";
 
@@ -37,11 +36,14 @@ export default async function Home() {
         tab.
       </p>
       <h2 className={homeStyle.title}>Latest minecraft world:</h2>
-      <Link href={`/${worldType}/${latestWorld.id}`} className={styles.linkbox}>
-        <h3 className={styles.name}>
+      <Link
+        href={`/${worldType}/${latestWorld.id}`}
+        className={homeStyle.linkbox}
+      >
+        <h3 className={homeStyle.name}>
           {latestWorld.modpack} - {latestWorld.world_name}
         </h3>
-        <h4 className={styles.date}>
+        <h4 className={homeStyle.date}>
           Date Started: {latestWorld.date_started}
         </h4>
         <Image

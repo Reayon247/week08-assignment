@@ -17,10 +17,19 @@
   padding-top: 5px;
 }
 
-.linkbox {
-  text-align: center;
+.postcontainer {
   grid-column-start: 2;
   grid-column-end: 3;
+  padding-top: 20px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkbox {
+  text-align: center;
   padding-top: 20px;
   font-size: large;
   border: 2px solid var(--borders);
@@ -57,5 +66,13 @@
   &:hover {
     background-color: grey;
     color: white;
+  }
+}
+
+@media (min-width: 850px) {
+  .postcontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

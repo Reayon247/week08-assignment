@@ -39,30 +39,34 @@ export default async function multiplayer({ searchParams }) {
           Sort Desc
         </Link>
       </nav>
-      {multiplayerWorlds.map((worlds) => {
-        const previewImage = imgGallery.find(
-          (image) => image.worldId === worlds.id && image.preview === true
-        );
-        return (
-          <Link
-            key={worlds.id}
-            href={`/multiplayer/${worlds.id}`}
-            className={styles.linkbox}
-          >
-            <h3 className={styles.name}>
-              {worlds.modpack} - {worlds.world_name}
-            </h3>
-            <h4 className={styles.date}>Date Started: {worlds.date_started}</h4>
-            <Image
-              src={previewImage.img_var}
-              alt={previewImage.img_alt}
-              width={400}
-              height="auto"
-              priority={true}
-            />
-          </Link>
-        );
-      })}
+      <div className={styles.postcontainer}>
+        {multiplayerWorlds.map((worlds) => {
+          const previewImage = imgGallery.find(
+            (image) => image.worldId === worlds.id && image.preview === true
+          );
+          return (
+            <Link
+              key={worlds.id}
+              href={`/multiplayer/${worlds.id}`}
+              className={styles.linkbox}
+            >
+              <h3 className={styles.name}>
+                {worlds.modpack} - {worlds.world_name}
+              </h3>
+              <h4 className={styles.date}>
+                Date Started: {worlds.date_started}
+              </h4>
+              <Image
+                src={previewImage.img_var}
+                alt={previewImage.img_alt}
+                width={400}
+                height="auto"
+                priority={true}
+              />
+            </Link>
+          );
+        })}
+      </div>
     </main>
   );
 }
