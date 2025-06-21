@@ -3,6 +3,9 @@ import DeleteButton from "./DeleteButton";
 
 export default function Comments(props) {
   const comments = props.commentArray;
+
+  comments.sort((a, b) => b.id - a.id);
+
   return (
     <div className={styles.commentcon}>
       <h2 className={styles.title}>Comments</h2>

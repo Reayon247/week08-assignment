@@ -30,13 +30,15 @@
 }
 
 .justcommentscon {
-  height: 400px;
+  max-height: 400px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   align-items: center;
+  border: 2px solid var(--borders);
+  padding: 10px;
 }
 
 .commentname {
