@@ -9,10 +9,10 @@ export default function Header() {
         <Link href={"/"} className={headerStyles.links}>
           Home
         </Link>
-        <Link href={"/singleplayer"} className={headerStyles.links}>
+        <Link href={"/singleplayer?sort=desc"} className={headerStyles.links}>
           Singleplayer Worlds
         </Link>
-        <Link href={"/multiplayer"} className={headerStyles.links}>
+        <Link href={"/multiplayer?sort=desc"} className={headerStyles.links}>
           Multiplayer Worlds
         </Link>
       </nav>

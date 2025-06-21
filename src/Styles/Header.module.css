@@ -29,6 +29,7 @@
   padding: 4px;
   cursor: pointer;
   text-align: center;
+  background-color: var(--boxbackground);
   &:hover {
     background-color: grey;
     color: white;
