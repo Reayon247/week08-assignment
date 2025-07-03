@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "@/Styles/WorldList.module.css";
 import Image from "next/image";
 import imgGallery from "@/utils/gallery";
+import { SignedIn } from "@clerk/nextjs";
 
 export default async function singleplayer({ searchParams }) {
   const queryString = await searchParams;
@@ -39,6 +40,11 @@ export default async function singleplayer({ searchParams }) {
         </Link>
       </nav>
       <p className={styles.navtitle}>Currently: {search}</p>
+      <SignedIn>
+        <Link className={styles.link} href={"/singleplayer/createpost"}>
+          Create New Post
+        </Link>
+      </SignedIn>
       <div className={styles.postcontainer}>
         {/* fiter the image worldid and image preview */}
         {singleplayerWorlds.map((worlds) => {
@@ -57,13 +63,19 @@ export default async function singleplayer({ searchParams }) {
               <h4 className={styles.date}>
                 Date Started: {worlds.date_started}
               </h4>
-              <Image
-                src={previewImage.img_var}
-                alt={previewImage.img_alt}
-                width={400}
-                height="auto"
-                priority={true}
-              />
+              {previewImage ? (
+                <Image
+                  src={previewImage.img_var}
+                  alt={previewImage.img_alt}
+                  width={400}
+                  height={250}
+                  priority={true}
+                />
+              ) : (
+                <div className={styles.noImagePlaceholder}>
+                  <p>No Preview Available</p>
+                </div>
+              )}
             </Link>
           );
         })}

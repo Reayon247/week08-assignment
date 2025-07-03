@@ -21,10 +21,12 @@
   padding: 5px;
   width: fit-content;
   background-color: #2e2e2e;
+  transition: transform 0.2s;
 
   &:hover {
     background-color: grey;
     color: white;
+    transform: scale(1.08);
   }
 }
 
@@ -34,6 +36,10 @@
   grid-column-end: 3;
   padding-top: 20px;
   font-size: large;
+}
+.noImagePlaceholder {
+  width: 400;
+  height: 226;
 }
 
 @media (min-width: 850px) {

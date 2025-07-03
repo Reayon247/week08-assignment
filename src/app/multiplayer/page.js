@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "@/Styles/WorldList.module.css";
 import Image from "next/image";
 import imgGallery from "@/utils/gallery";
+import { SignedIn } from "@clerk/nextjs";
 
 export default async function multiplayer({ searchParams }) {
   const queryString = await searchParams;
@@ -39,6 +40,11 @@ export default async function multiplayer({ searchParams }) {
         </Link>
       </nav>
       <p className={styles.navtitle}>Currently: {search}</p>
+      <SignedIn>
+        <Link className={styles.link} href={"/multiplayer/createpost"}>
+          Create New Post
+        </Link>
+      </SignedIn>
       <div className={styles.postcontainer}>
         {multiplayerWorlds.map((worlds) => {
           const previewImage = imgGallery.find(
@@ -60,7 +66,7 @@ export default async function multiplayer({ searchParams }) {
                 src={previewImage.img_var}
                 alt={previewImage.img_alt}
                 width={400}
-                height="auto"
+                height={250}
                 priority={true}
               />
             </Link>

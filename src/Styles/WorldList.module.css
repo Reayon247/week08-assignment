@@ -38,10 +38,12 @@
   padding: 5px;
   width: fit-content;
   background-color: #2e2e2e;
+  transition: transform 0.2s;
 
   &:hover {
     background-color: grey;
     color: white;
+    transform: scale(1.08);
   }
 }
 
@@ -68,6 +70,27 @@
     background-color: grey;
     color: white;
   }
+}
+.link {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border-radius: 5px;
+  border-top: 2px solid #00f1f1;
+  border-bottom: 2px solid #00f1f1;
+  padding: 4px;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--boxbackground);
+  margin-top: 10px;
+  &:hover {
+    background-color: grey;
+    color: white;
+  }
+}
+
+.noImagePlaceholder {
+  width: 400;
+  height: 226;
 }
 
 @media (min-width: 850px) {

@@ -43,15 +43,23 @@ export default function Gallery(props) {
       <h1 className={styles.title}>Screenshots of the world</h1>
 
       <div className={styles.imagecon}>
-        <Image
-          src={currentImage.img_var}
-          alt={currentImage.img_alt}
-          height={1080}
-          width={1920}
-          placeholder="blur"
-          className={styles.image}
-        />
-        <p className={styles.desc}>{currentImage.img_alt}</p>
+        {currentImage ? (
+          <>
+            <Image
+              src={currentImage.img_var}
+              alt={currentImage.img_alt}
+              height={1080}
+              width={1920}
+              placeholder="blur"
+              className={styles.image}
+            />
+            <p className={styles.desc}>{currentImage.img_alt}</p>
+          </>
+        ) : (
+          <div className={styles.noImagePlaceholder}>
+            <p>No Preview Available</p>
+          </div>
+        )}
         <button className={styles.buttonleft} onClick={handlePrev}>
           ←
         </button>

@@ -46,13 +46,19 @@ export default async function Home() {
         <h4 className={homeStyle.date}>
           Date Started: {latestWorld.date_started}
         </h4>
-        <Image
-          src={previewImage.img_var}
-          alt={previewImage.img_alt}
-          width={400}
-          height="auto"
-          priority={true}
-        />
+        {previewImage ? (
+          <Image
+            src={previewImage.img_var}
+            alt={previewImage.img_alt}
+            width={400}
+            height="auto"
+            priority={true}
+          />
+        ) : (
+          <div className={homeStyle.noImagePlaceholder}>
+            <p className="text-center">No Preview Available</p>
+          </div>
+        )}
       </Link>
     </main>
   );
